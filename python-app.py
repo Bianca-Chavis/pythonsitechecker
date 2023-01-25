@@ -5,11 +5,14 @@
 
 import urllib.request as urllib
 
-
-print("This is a site connectivity checker programme")
-input_url = input("input a url to check if it is reachable")
 def main(url):
     print("Checking connectivity ")
     response = urllib.urlopen(url)
-
     print("Connected to ", url, "successfully")
+    print("Status code: ", response.getcode())
+
+
+print("This is a site connectivity checker programme")
+input_url = input("input a url to check if it is reachable: ")
+main(input_url)
+
